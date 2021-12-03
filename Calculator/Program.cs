@@ -4,7 +4,7 @@ namespace Calculator
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             double firstValue, secondValue;                         // Нормальный калькулятор
             string action;
