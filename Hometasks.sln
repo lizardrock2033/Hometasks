@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyConverter", "MoneyConv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegates", "Delegates\Delegates.csproj", "{373CD827-7979-4B75-A0D9-B6726CF1AE74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsCalc", "WordsCalc\WordsCalc.csproj", "{01F8888F-7678-4C43-B813-4CBF1A33A6DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordsCalc", "WordsCalc\WordsCalc.csproj", "{01F8888F-7678-4C43-B813-4CBF1A33A6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lambda", "lambda\lambda.csproj", "{63547EBF-C2FE-4420-B3C2-A034C4B3A7CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{01F8888F-7678-4C43-B813-4CBF1A33A6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F8888F-7678-4C43-B813-4CBF1A33A6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F8888F-7678-4C43-B813-4CBF1A33A6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63547EBF-C2FE-4420-B3C2-A034C4B3A7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63547EBF-C2FE-4420-B3C2-A034C4B3A7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63547EBF-C2FE-4420-B3C2-A034C4B3A7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63547EBF-C2FE-4420-B3C2-A034C4B3A7CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

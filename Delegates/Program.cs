@@ -1,48 +1,34 @@
 ﻿using System;
+using System.Threading;
 
 namespace Delegates
 {
-    delegate string MyDelegate(string str);
+    delegate void NumberHandler(string str);
     class Program
     {
+        public event NumberHandler Notify;
+        private int Number { set; get; }
+
+        public void Generator()
+        {
+            while (true)
+            {
+                Number = new Random().Next(100);
+                if (Number < 50) Notify?.Invoke("Get less than 50!: " + Number);
+
+                Thread.Sleep(500);
+            }
+        }
         static void Main()
         {
-            MyDelegate myDel = new(StrReverse);
-            string str;
-            string dStr = "Same text";
+            Program pr = new();
 
-            str = myDel(dStr);
-            Console.WriteLine(str);
-
-            myDel = SpReplace;
-            str = myDel(dStr);
-            Console.WriteLine(str);
-
-            myDel = SpRemove;
-            str = myDel(dStr);
-            Console.WriteLine(str);
-
-            Console.ReadLine();
+            pr.Notify += ConsoleNotify;
+            pr.Generator();
         }
-        static string StrReverse(string s)
+        public static void ConsoleNotify(string str)
         {
-            string nStr = "";
-            for (int i = s.Length - 1; i >= 0; i--)
-                nStr += s[i];
-
-            return nStr;
-        }
-        static string SpReplace(string s)
-        {
-            return s.Replace(' ', '-');
-        }
-        static string SpRemove(string s)
-        {
-            string nStr = "";
-            for (int i = 0; i < s.Length; i++)
-                if (s[i] != ' ') nStr += s[i];
-            
-            return nStr;
+            Console.WriteLine(str);
         }
     }
 }
